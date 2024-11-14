@@ -33,7 +33,7 @@ sed -i '/url_help/c\    <string name="url_help">https://help.drive.theynjn.com/c
 sed -i '/privacy_enabled/c\    <bool name="privacy_enabled">false</bool>' "$FILE"
 sed -i '/privacy_url/c\    <string name="privacy_url">https://drive.theynjn.com/privacy</string>' "$FILE"
     # <bool name="imprint_enabled">false</bool>
-    # <bool name="recommend_enabled">true</bool>
+# sed -i '/recommend_enabled/c\    <bool name="recommend_enabled">true</bool>' "$FILE"
     # <bool name="logger_enabled">false</bool>
 sed -i '/sourcecode_enabled/c\    <bool name="sourcecode_enabled">false</bool>' "$FILE"
 sed -i '/sourcecode_url/c\    <string name="sourcecode_url" translatable="false">https://github.com/theynjn/drive-android</string>' "$FILE"
