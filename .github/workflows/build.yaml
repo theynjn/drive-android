@@ -48,6 +48,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            source-code/android/build/outputs/apk/gplay/release/*.apk
+            source-code/build/outputs/apk/gplay/release/*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
