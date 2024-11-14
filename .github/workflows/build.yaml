@@ -49,5 +49,8 @@ jobs:
         with:
           files: |
             source-code/build/outputs/apk/gplay/release/*.apk
+            source-code/build/outputs/apk/gplay/*.apk
+            source-code/build/outputs/apk/*.apk
+            source-code/build/outputs/*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
