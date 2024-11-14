@@ -47,6 +47,10 @@ sed -i '/webview_login_url/c\    <string name="webview_login_url" translatable="
 
 sed -i 's/Nextcloud/TheYnjn Drive/g;' "$FILE"
 
+sed -i '/nextcloud_user_agent/c\    <string name="nextcloud_user_agent">Mozilla/5.0 (Android) Nextcloud-android/%1$s%2$s</string>' "$FILE"
+sed -i '/only_office_user_agent/c\    <string name="only_office_user_agent">Mozilla/5.0 (Android %1$s) Mobile Nextcloud-android/%2$s</string>' "$FILE"
+
+
 # echo 'export PATH=$PATH:/workspace/drive-android/android-sdk-linux/platform-tools' >> /etc/profile.d/android.sh
 
 # echo 'export ANDROID_TOOLS=/workspace/drive-android/android-sdk-linux' >> /etc/profile.d/android.sh
