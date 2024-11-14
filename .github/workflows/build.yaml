@@ -23,7 +23,7 @@ jobs:
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
+          java-version: '21'
           distribution: 'temurin'
       
       - name: Cache Gradle Dependency
@@ -31,7 +31,7 @@ jobs:
         with:
           path: ~/.gradle/caches
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties')}}
-          restore-key: gradle-${{ runner.os }}-
+          restore-keys: gradle-${{ runner.os }}-
       - name: Grant Execute Permission
         run: chmod +x source-code/gradlew
       
