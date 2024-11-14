@@ -32,6 +32,7 @@ jobs:
           path: ~/.gradle/caches
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties')}}
           restore-keys: gradle-${{ runner.os }}-
+          
       - name: Grant Execute Permission
         run: chmod +x source-code/gradlew
       
@@ -43,7 +44,7 @@ jobs:
         working-directory: source-code
         run: ./gradlew clean assembleGplayRelease
       
-      -name: Sign APK
+      - name: Sign APK
         run: $(find /usr/local/lib/android/sdk/build-tools/*/apksigner | sort | tail -n1) sign  --ks-pass pass:${{ secrets.KS_PASS }} --key-pass pass:${{ secrets.KEY_PASS }} --ks-key-alias key-sign --ks keystore.jks source-code/app/build/outputs/apk/gplay/release/gplay-release-*.apk
 
       - name: Upload APKs to Github Release
