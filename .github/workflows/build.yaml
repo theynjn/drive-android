@@ -2,7 +2,7 @@ name: Build Apk
 
 on:
   push:
-    branch: main
+    branch: sign
 
 jobs:
   build:
@@ -45,20 +45,23 @@ jobs:
         run: ./gradlew clean assembleGplayRelease
       
       - name: Sign APK
-        run: $(find /usr/local/lib/android/sdk/build-tools/*/apksigner | sort | tail -n1) sign  --ks-pass pass:${{ secrets.KS_PASS }} --key-pass pass:${{ secrets.KEY_PASS }} --ks-key-alias key-sign --ks keystore.jks source-code/app/build/outputs/apk/gplay/release/gplay-release-*.apk
+        run: |
+         ls /usr/local/lib/android/sdk/build-tools
+         echo $(find /usr/local/lib/android/sdk/build-tools/*/apksigner | sort | tail -n1)
+         # sign  --ks-pass pass:${{ secrets.KS_PASS }} --key-pass pass:${{ secrets.KEY_PASS }} --ks-key-alias key-sign --ks keystore.jks source-code/app/build/outputs/apk/gplay/release/gplay-release-*.apk
 
-      - name: Upload APKs to Github Release
-        id: upload-releases
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            source-code/build/outputs/apk/gplay/release/*.apk
-            source-code/build/outputs/apk/gplay/*.apk
-            source-code/build/outputs/apk/*.apk
-            source-code/build/outputs/*.apk
-            source-code/app/build/outputs/apk/gplay/release/*.apk
-            source-code/app/build/outputs/apk/gplay/*.apk
-            source-code/app/build/outputs/apk/*.apk
-            source-code/app/build/outputs/*.apk
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      # - name: Upload APKs to Github Release
+      #   id: upload-releases
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     files: |
+      #       source-code/build/outputs/apk/gplay/release/*.apk
+      #       source-code/build/outputs/apk/gplay/*.apk
+      #       source-code/build/outputs/apk/*.apk
+      #       source-code/build/outputs/*.apk
+      #       source-code/app/build/outputs/apk/gplay/release/*.apk
+      #       source-code/app/build/outputs/apk/gplay/*.apk
+      #       source-code/app/build/outputs/apk/*.apk
+      #       source-code/app/build/outputs/*.apk
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
