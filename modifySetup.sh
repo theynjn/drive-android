@@ -2,7 +2,7 @@
 
 FILE="source-code/app/src/main/res/values/setup.xml"
 
-sed -i 's/org.nextcloud/org.theynjn.drive/g;' "$FILE"
+# sed -i 's/org.nextcloud/org.theynjn.drive/g;' "$FILE"
 
 sed -i 's/com.nextcloud/com.theynjn.drive/g;' "$FILE"
 
@@ -10,9 +10,9 @@ sed -i 's/nextcloud.db/theynjndrive.db/g;' "$FILE"
 
 # sed -i '/show_server_url_input/c\    <bool name="show_server_url_input">false</bool>' "$FILE"
 
-sed -i 's/https:\/\/www.nextcloud.com\/register/ /;' "$FILE"
+# sed -i 's/https:\/\/www.nextcloud.com\/register/ /;' "$FILE"
 
-sed -i '/account_type/c\    <string name="account_type">nextcloud</string>' "$FILE"
+# sed -i '/account_type/c\    <string name="account_type">nextcloud</string>' "$FILE"
 sed -i '/db_name/c\    <string name="db_name">theynjndrive</string>' "$FILE"
 sed -i '/data_folder/c\    <string name="data_folder">theynjndrive</string>' "$FILE"
 
