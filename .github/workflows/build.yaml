@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name : Clone Source Repo
-        run: git clone https://github.com/nextcloud/android.git source-code
+        run: git clone --branch stable-3.30 https://github.com/nextcloud/android.git source-code
       
       - name: Run modifications
         run: |
@@ -52,7 +52,7 @@ jobs:
         id: upload-releases
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v3.30.5.alpha2
+          tag_name: v3.30
           files: |
             source-code/build/outputs/apk/gplay/release/*.apk
             source-code/build/outputs/apk/gplay/*.apk
