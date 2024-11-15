@@ -43,7 +43,7 @@ sed -i '/license_url/c\    <string name="license_url" translatable="false">https
 sed -i '/url_app_download/c\    <string name="url_app_download">"https://play.google.com/store/apps/details?id=com.theynjn.drive.client"</string>' "$FILE"
 sed -i '/url_server_install/c\    <string name="url_server_install">https://drive.theynjn.com</string>' "$FILE"
 
-# sed -i '/webview_login_url/c\    <string name="webview_login_url" translatable="false">https://drive.theynjn.com/index.php/login/flow</string>' "$FILE"
+sed -i '/webview_login_url/c\    <string name="webview_login_url" translatable="false">https://drive.theynjn.com/index.php/login/flow</string>' "$FILE"
 
 sed -i 's/Nextcloud/TheYnjn Drive/g;' "$FILE"
 
