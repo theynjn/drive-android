@@ -51,6 +51,7 @@ jobs:
         id: upload-releases
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: v3.30.5.alpha1
           files: |
             source-code/build/outputs/apk/gplay/release/*.apk
             source-code/build/outputs/apk/gplay/*.apk
