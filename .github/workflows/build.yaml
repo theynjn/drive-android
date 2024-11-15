@@ -18,7 +18,7 @@ jobs:
         run: |
           # ./modifyGradleBuild.sh
           # ./modifyGradleSettings.sh
-          # ./modifySetup.sh
+          ./modifySetup.sh
           ./setIcon.sh
 
       - name: Set up JDK 17
