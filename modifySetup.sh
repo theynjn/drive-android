@@ -2,7 +2,7 @@
 
 FILE="source-code/app/src/main/res/values/setup.xml"
 
-# sed -i 's/org.nextcloud/org.theynjn.drive/g;' "$FILE"
+sed -i 's/org.nextcloud/org.theynjn.drive/g;' "$FILE"
 
 sed -i 's/com.nextcloud/com.theynjn.drive/g;' "$FILE"
 
