@@ -33,7 +33,7 @@ sed -i '/url_help/c\    <string name="url_help">https://help.drive.theynjn.com/c
 sed -i '/privacy_enabled/c\    <bool name="privacy_enabled">false</bool>' "$FILE"
 sed -i '/privacy_url/c\    <string name="privacy_url">https://drive.theynjn.com/privacy</string>' "$FILE"
     # <bool name="imprint_enabled">false</bool>
-# sed -i '/recommend_enabled/c\    <bool name="recommend_enabled">true</bool>' "$FILE"
+sed -i '/recommend_enabled/c\    <bool name="recommend_enabled">false</bool>' "$FILE"
     # <bool name="logger_enabled">false</bool>
 sed -i '/sourcecode_enabled/c\    <bool name="sourcecode_enabled">false</bool>' "$FILE"
 sed -i '/sourcecode_url/c\    <string name="sourcecode_url" translatable="false">https://github.com/theynjn/drive-android</string>' "$FILE"
@@ -43,9 +43,12 @@ sed -i '/license_url/c\    <string name="license_url" translatable="false">https
 sed -i '/url_app_download/c\    <string name="url_app_download">"https://play.google.com/store/apps/details?id=com.theynjn.drive.client"</string>' "$FILE"
 sed -i '/url_server_install/c\    <string name="url_server_install">https://drive.theynjn.com</string>' "$FILE"
 
-sed -i '/webview_login_url/c\    <string name="webview_login_url" translatable="false">https://drive.theynjn.com/index.php/login/v2/flow</string>' "$FILE"
+sed -i '/webview_login_url/c\    <string name="webview_login_url" translatable="false">https://drive.theynjn.com/index.php/login/v2</string>' "$FILE"
 
 sed -i 's/Nextcloud/TheYnjn Drive/g;' "$FILE"
+
+sed -i '/participate_enabled/c\    <bool name="participate_enabled">false</bool>' "$FILE"
+sed -i '/is_branded_client/c\    <bool name="is_branded_client">true</bool>' "$FILE"
 
 sed -i '/nextcloud_user_agent/c\    <string name="nextcloud_user_agent">Mozilla/5.0 (Android) Nextcloud-android/%1$s%2$s</string>' "$FILE"
 sed -i '/only_office_user_agent/c\    <string name="only_office_user_agent">Mozilla/5.0 (Android %1$s) Mobile Nextcloud-android/%2$s</string>' "$FILE"
