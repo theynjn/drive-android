@@ -16,9 +16,9 @@ jobs:
       
       - name: Run modifications
         run: |
-          ./modifyGradleBuild.sh
-          ./modifyGradleSettings.sh
-          ./modifySetup.sh
+          # ./modifyGradleBuild.sh
+          # ./modifyGradleSettings.sh
+          # ./modifySetup.sh
           ./setIcon.sh
 
       - name: Set up JDK 17
@@ -27,12 +27,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       
-      # - name: Cache Gradle Dependency
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ~/.gradle/caches
-      #     key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties')}}
-      #     restore-keys: gradle-${{ runner.os }}-
+      - name: Cache Gradle Dependency
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties')}}
+          restore-keys: gradle-${{ runner.os }}-
           
       - name: Grant Execute Permission
         run: chmod +x source-code/gradlew
@@ -52,7 +52,7 @@ jobs:
         id: upload-releases
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v3.30.5.alpha1
+          tag_name: v3.30.5.alpha2
           files: |
             source-code/build/outputs/apk/gplay/release/*.apk
             source-code/build/outputs/apk/gplay/*.apk
