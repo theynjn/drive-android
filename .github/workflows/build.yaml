@@ -16,7 +16,7 @@ jobs:
       
       - name: Run modifications
         run: |
-          # ./modifyGradleBuild.sh
+          ./modifyGradleBuild.sh
           # ./modifyGradleSettings.sh
           ./modifySetup.sh
           ./setIcon.sh
