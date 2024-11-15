@@ -12,7 +12,7 @@ sed -i '/show_server_url_input/c\    <bool name="show_server_url_input">false</b
 
 sed -i 's/https:\/\/www.nextcloud.com\/register/ /;' "$FILE"
 
-sed -i '/account_type/c\    <string name="account_type">drive.theynjn.com</string>' "$FILE"
+sed -i '/account_type/c\    <string name="account_type">nextcloud</string>' "$FILE"
 sed -i '/db_name/c\    <string name="db_name">theynjndrive</string>' "$FILE"
 sed -i '/data_folder/c\    <string name="data_folder">theynjndrive</string>' "$FILE"
 
