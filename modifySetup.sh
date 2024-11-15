@@ -8,7 +8,7 @@ sed -i 's/com.nextcloud/com.theynjn.drive/g;' "$FILE"
 
 sed -i 's/nextcloud.db/theynjndrive.db/g;' "$FILE"
 
-sed -i '/show_server_url_input/c\    <bool name="show_server_url_input">false</bool>' "$FILE"
+# sed -i '/show_server_url_input/c\    <bool name="show_server_url_input">false</bool>' "$FILE"
 
 sed -i 's/https:\/\/www.nextcloud.com\/register/ /;' "$FILE"
 

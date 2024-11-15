@@ -19,6 +19,7 @@ jobs:
           ./modifyGradleBuild.sh
           ./modifyGradleSettings.sh
           ./modifySetup.sh
+          ./setIcon.sh
 
       - name: Set up JDK 17
         uses: actions/setup-java@v2
