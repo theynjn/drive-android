@@ -18,15 +18,15 @@ sed -i '/data_folder/c\    <string name="data_folder">theynjndrive</string>' "$F
 
 # color
 # primary
-sed -i 's/#0082c9/#0082c9/g;' "$FILE"
+sed -i 's/#0082c9/#3dcfdc/g;' "$FILE"
 # primary dark
-sed -i 's/#006AA3/#006AA3/g;' "$FILE"
+sed -i 's/#006AA3/#2b99a3/g;' "$FILE"
 # color accent
 sed -i 's/#007cc2/#007cc2/g;' "$FILE"
 #login text 
 sed -i 's/#ffffff/#ffffff/g;' "$FILE"
 # login text hint
-sed -i 's/#7fC0E3/#7fC0E3/g;' "$FILE"
+sed -i 's/#7fC0E3/#73D9E3/g;' "$FILE"
 
 sed -i '/help_enabled/c\    <bool name="help_enabled">false</bool>' "$FILE"
 sed -i '/url_help/c\    <string name="url_help">https://help.drive.theynjn.com/c/clients/android/</string>' "$FILE"
