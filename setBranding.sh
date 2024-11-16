@@ -1,0 +1,1 @@
+sed -i 's/Nextcloud/TheYnjn Drive/g;' source-code/app/src/main/res/layout/drawer_header.xml

@@ -1,11 +1,8 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
-    android:viewportWidth="1594.7866"
-    android:viewportHeight="1594.7866"
-    android:width="108dp"
-    android:height="108dp">
-    <group
-        android:translateX="265.39328"
-        android:translateY="280.15982">
+    android:autoMirrored="false" android:height="47.11639dp"
+    android:viewportHeight="44.17161" android:viewportWidth="215.62502"
+    android:width="230dp" xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="VectorRaster">>
     <path
         android:pathData="M267.5 112L340 112.5L267.5 113L267.5 112Z"
         android:fillColor="#5BB2C3"
@@ -29280,5 +29277,4 @@
         android:strokeColor="#0468B0"
         android:strokeAlpha="0.9372549"
         android:strokeWidth="1" />
-    </group>
 </vector>
