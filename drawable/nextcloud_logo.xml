@@ -1,7 +1,7 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+<vector xmlns:tools="http://schemas.android.com/tools"
     android:autoMirrored="false" android:height="47.11639dp"
     android:viewportHeight="44.17161" android:viewportWidth="215.62502"
-    android:width="230dp"
+    android:width="230dp" xmlns:android="http://schemas.android.com/apk/res/android"
     tools:ignore="VectorRaster">
     <path
         android:pathData="M267.5 112L340 112.5L267.5 113L267.5 112Z"
